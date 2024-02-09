@@ -14,9 +14,9 @@ void main() {
        r += vec2(-r.y, r.x) * 0.2;
        uv.xy = r;
     }
-    float r = sin(uv.x - time) * 0.5 + 0.5;
-    float b = sin(uv.y + time) * 0.5 + 0.5;
-    float g = sin((uv.x + uv.y + sin(time * 0.5)) * 0.5) * 0.5 + 0.5;
+    float r = sin(uv.x - time/2.0) * 0.5 + 0.5;
+    float b = sin(uv.y + time/2.0) * 0.5 + 0.5;
+    float g = sin((uv.x + uv.y + sin(time * 0.25)) * 0.5) * 0.5 + 0.5;
     
     gl_FragColor = vec4(r, g, b, 1.0);
     
